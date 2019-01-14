@@ -1,0 +1,76 @@
+/* ------------------------------------------------------------------ */
+/*        FONTS
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/*        COLORS
+/* ------------------------------------------------------------------ */
+
+$light-blue: #e0f0ff;
+$dark-blue: #44a5ff;
+$grey: #ddd;
+/* ------------------------------------------------------------------ */
+/*        BREAKPOINTS
+/* ------------------------------------------------------------------ */
+
+$breakpoint-small-mobile: 375px;
+$breakpoint-mobile: 700px;
+$breakpoint-tablet: 768px;
+$breakpoint-small-desktop: 1024px;
+$breakpoint-tablet-landscape: 1280px;
+$breakpoint-medium-desktop: 1366px;
+$breakpoint-very-large-desktop: 1700px;
+$breakpoint-small-height: 700px;
+
+/* ------------------------------------------------------------------ */
+/*        TRANSITIONS
+/* ------------------------------------------------------------------ */
+
+$carousel-transition-timing: 500ms;
+$hover-transition: 300ms;
+
+/* ------------------------------------------------------------------ */
+/*        MEDIA QUERIES
+/* ------------------------------------------------------------------ */
+
+@mixin small-mobile {
+	@media screen and (max-width: $breakpoint-small-mobile) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (max-width: $breakpoint-mobile) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (max-width: $breakpoint-tablet) {
+		@content;
+	}
+}
+
+@mixin tablet-landscape {
+	@media screen and (max-width: $breakpoint-tablet-landscape) and (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin small-desktop {
+	@media screen and (max-width: $breakpoint-small-desktop) {
+		@content;
+	}
+}
+
+@mixin medium-desktop {
+	@media screen and (max-width: $breakpoint-medium-desktop) {
+		@content;
+	}
+}
+
+@mixin very-large-desktop {
+	@media screen and (min-width: $breakpoint-very-large-desktop) {
+		@content;
+	}
+}

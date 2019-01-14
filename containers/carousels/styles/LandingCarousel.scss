@@ -1,0 +1,205 @@
+@import 'vars';
+
+.landing-carousel {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	transition-duration: 300ms;
+
+	@include small-desktop {
+		margin-top: 20px;
+		height: 100%;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&__content {
+		width: 100vh;
+		height: 80vh;
+		margin: 10vh;
+		position: relative;
+		background-color: #fff;
+		overflow: hidden;
+		z-index: 1;
+		box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		@include small-desktop {
+			margin: 0 0 80px;
+			width: calc(100vw - 80px);
+			height: 80vw;
+		}
+
+		@include tablet {
+			margin: 0 0 60px;
+			width: 100vw;
+			height: 82vw;
+		}
+
+		@include mobile {
+			margin: 0 0 110px;
+		}
+	}
+
+	&__launch-btn {
+		position: absolute;
+		right: 0;
+		bottom: 10vh;
+		width: 10vh;
+		height: 10vh;
+		background-color: rgba(0, 0, 0, 0.5);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		a {
+			height: 28px;
+		}
+
+		@include small-desktop {
+			bottom: 0;
+			right: 40px;
+			width: 80px;
+			height: 80px;
+		}
+
+		@include tablet {
+			right: 0px;
+			width: 60px;
+			height: 60px;
+
+			a {
+				height: 18px;
+			}
+
+			svg {
+				width: 18px;
+				height: 18px;
+			}
+		}
+
+		@include mobile {
+			bottom: 60px;
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	&__controls {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 420px;
+		height: 10vh;
+		background-color: $dark-blue;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+
+		@include small-desktop {
+			width: 420px;
+			height: 80px;
+			right: 120px;
+		}
+
+		@include tablet {
+			height: 60px;
+			right: 60px;
+		}
+
+		@include mobile {
+			width: calc(100vw - 50px);
+			height: 50px;
+			bottom: 60px;
+			right: 50px;
+		}
+
+		p {
+			color: #fff;
+		}
+
+		&--progress {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin: 0 25px 0 5px;
+
+			@include mobile {
+				margin: 0 15px 0 0;
+			}
+		}
+
+		&--progress-bar {
+			width: 200px;
+			height: 6px;
+			border-radius: 3px;
+			background-color: $grey;
+			margin: 0 10px;
+
+			@include mobile {
+				width: 180px;
+			}
+
+			&__active {
+				height: 6px;
+				border-radius: 3px;
+				background-color: #fff;
+			}
+		}
+
+		&--arrow svg {
+			width: 22px;
+			margin: 0 5px;
+
+			@include mobile {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.anim__landing-carousel-appear {
+	opacity: 0.01;
+}
+.anim__landing-carousel-appear.anim__landing-carousel-appear-active {
+	opacity: 1;
+	transition: opacity 500ms ease-in;
+}
+.anim__landing-carousel-enter {
+	height: 0px;
+	opacity: 0.01;
+}
+.anim__landing-carousel-enter.anim__landing-carousel-enter-active {
+	opacity: 1;
+	height: 100vh;
+	transition: opacity 250ms ease-in 500ms, height 500ms ease-in;
+}
+.anim__landing-carousel-leave {
+	opacity: 1;
+	transition: opacity 250ms ease-in, height 500ms ease-in 250ms;
+}
+.anim__landing-carousel-leave.anim__landing-carousel-leave-active {
+	height: 0px;
+	opacity: 0.01;
+}
+
+.anim__landing-carousel__spacer-enter {
+	height: 0px;
+}
+.anim__landing-carousel__spacer-enter.anim__landing-carousel__spacer-enter-active {
+	transition: height 500ms ease-in 250ms;
+}
+.anim__landing-carousel__spacer-leave {
+	transition: height 500ms;
+}
+.anim__landing-carousel__spacer-leave.anim__landing-carousel__spacer-leave-active {
+	height: 0px;
+}

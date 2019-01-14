@@ -1,0 +1,10 @@
+@import 'vars';
+
+.socials {
+	transition-duration: $hover-transition;
+
+	&:hover {
+		fill: $dark-blue;
+		transition-duration: $hover-transition;
+	}
+}

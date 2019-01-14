@@ -1,0 +1,17 @@
+@import 'vars';
+
+.arrow-left {
+	&__stroke {
+		stroke: $grey;
+		transition-duration: $hover-transition;
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		.arrow-left__stroke {
+			stroke: #fff;
+			transition-duration: $hover-transition;
+		}
+	}
+}
