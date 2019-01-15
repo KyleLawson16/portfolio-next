@@ -32,7 +32,7 @@
 
 		@include small-desktop {
 			margin: 0 0 80px;
-			width: calc(100vw - 80px);
+			width: calc(100vw - 40px);
 			height: 80vw;
 		}
 
@@ -64,7 +64,7 @@
 
 		@include small-desktop {
 			bottom: 0;
-			right: 40px;
+			right: 20px;
 			width: 80px;
 			height: 80px;
 		}
@@ -106,7 +106,7 @@
 		@include small-desktop {
 			width: 420px;
 			height: 80px;
-			right: 120px;
+			right: 100px;
 		}
 
 		@include tablet {
@@ -119,6 +119,7 @@
 			height: 50px;
 			bottom: 60px;
 			right: 50px;
+			justify-content: space-around;
 		}
 
 		p {
@@ -133,7 +134,7 @@
 			margin: 0 25px 0 5px;
 
 			@include mobile {
-				margin: 0 15px 0 0;
+				margin: 0 15px 0 20px;
 			}
 		}
 
@@ -152,6 +153,16 @@
 				height: 6px;
 				border-radius: 3px;
 				background-color: #fff;
+			}
+		}
+
+		&--arrow {
+			@include mobile {
+				height: 36px;
+
+				&:last-child {
+					margin-right: 20px;
+				}
 			}
 		}
 

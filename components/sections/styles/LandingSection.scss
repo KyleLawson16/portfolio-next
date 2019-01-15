@@ -50,6 +50,16 @@
 		}
 	}
 
+	&__logo {
+		margin-right: 20px;
+		height: 30px;
+
+		svg {
+			width: 28px;
+			height: 30px;
+		}
+	}
+
 	&__footer {
 		position: absolute;
 		bottom: 0;

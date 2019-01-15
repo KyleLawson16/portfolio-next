@@ -2,6 +2,6 @@
 
 # Allow crawling of all content
 User-agent: *
-Disallow: /dashboard
+Disallow: 
 
 Sitemap: https://kylelawson.io/static/sitemap.xml

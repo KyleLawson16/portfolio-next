@@ -1,6 +1,6 @@
 {
     "short_name": "portfolio",
-    "name": "Kyle Lawson | Entrepreneur, Developer, Mountaineer",
+    "name": "Kyle Lawson",
     "icons": [
       {
         "src": "static/favicon.png",
@@ -9,7 +9,7 @@
       }
     ],
     "background_color": "#000000",
-    "theme_color": "#ff0000",
+    "theme_color": "#e0f0ff",
     "start_url": "./index.html",
     "display": "standalone"
   }

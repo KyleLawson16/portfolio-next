@@ -12,7 +12,7 @@ import { LandingCarousel } from '../containers/carousels';
 
 const Index = ({ pageContent, projects }) => (
 	<div className="container">
-		<HeadCommon title={'Page Title'} description={'Page Description'} />
+		<HeadCommon title={pageContent.fields.pageTitle} description={pageContent.fields.pageDescription} />
 		<div className="content-container">
 			<LandingSection data={pageContent} projects={projects} />
 			<LandingCarousel data={projects} />
@@ -29,9 +29,9 @@ Index.getInitialProps = async () => {
 		content_type: 'page'
 	});
 	const projects = await client.getEntries({
-		content_type: 'project'
+		content_type: 'project',
+		order: 'fields.index'
 	});
-	console.log(projects);
 	return { pageContent: pageContent.items[0], projects: projects.items };
 };
 

@@ -1,11 +1,11 @@
 // Styles
 import './styles/LandingSection.scss';
-import { GithubSVG, HyphenSVG, LinkedinSVG, TwitterSVG } from '../icons';
+import { GithubSVG, HyphenSVG, LinkedinSVG, TwitterSVG, LogoSVG } from '../icons';
 
 const socials = [
-	{ icon: <GithubSVG />, url: 'https://github.com' },
-	{ icon: <LinkedinSVG />, url: 'https://linkedin.com' },
-	{ icon: <TwitterSVG />, url: 'https://twitter.com' }
+	{ icon: <GithubSVG />, url: 'https://github.com/KyleLawson16' },
+	{ icon: <LinkedinSVG />, url: 'https://www.linkedin.com/in/kylejlawson/' },
+	{ icon: <TwitterSVG />, url: 'https://twitter.com/KyleLaws0n' }
 ];
 const LandingSection = ({ data }) => {
 	return (
@@ -19,8 +19,11 @@ const LandingSection = ({ data }) => {
 			</div>
 
 			<div className="landing-section__footer">
+				<div className="landing-section__logo">
+					<LogoSVG />
+				</div>
 				{socials.map((i, idx) => (
-					<a key={idx} className="landing-section__footer--social" href={i.url}>
+					<a key={idx} className="landing-section__footer--social" href={i.url} target="__blank">
 						{i.icon}
 					</a>
 				))}
