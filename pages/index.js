@@ -32,7 +32,10 @@ Index.getInitialProps = async () => {
 		content_type: 'project',
 		order: 'fields.index'
 	});
-	return { pageContent: pageContent.items[0], projects: projects.items };
+	return {
+		pageContent: pageContent.items[0],
+		projects: projects.items
+	};
 };
 
 export default Index;

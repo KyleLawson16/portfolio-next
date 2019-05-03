@@ -1,0 +1,64 @@
+@import "vars";
+
+.loading-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 100px;
+      margin: 0 auto;
+    }
+  }
+
+  &__progress {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    // @include mobile {
+    //   margin: 0 15px 0 20px;
+    // }
+  }
+
+  &__progress-bar {
+    width: 160px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $light-blue;
+    margin: 0 10px;
+
+    // @include mobile {
+    //   width: 180px;
+    // }
+
+    &--active {
+      height: 6px;
+      border-radius: 3px;
+      background-color: $dark-blue;
+    }
+  }
+}
+
+.loading__logo-enter {
+  opacity: 0;
+}
+.loading__logo-enter.loading__logo-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}

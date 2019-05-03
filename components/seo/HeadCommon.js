@@ -19,9 +19,9 @@ const HeadCommon = ({ title, description }) => (
 
 		{/* Social Sharing */}
 		<meta property="og:image" content="/static/social.png" />
-		<meta property="og:title" content={`LOU | ${title}`} />
+		<meta property="og:title" content={`${title}`} />
 		<meta property="og:description" content={description} />
-		<meta name="twitter:title" content={`LOU | ${title}`} />
+		<meta name="twitter:title" content={`${title}`} />
 
 		{/* Twitter */}
 		<meta name="twitter:card" content="summary" />

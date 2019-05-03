@@ -1,23 +1,23 @@
-@import 'vars';
+@import "vars";
 body {
-	margin: 0;
+  margin: 0;
 }
 html {
-	background-color: white;
+  background-color: white;
 }
 html,
 body {
-	width: 100%;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 
-	@include small-desktop {
-		overflow-y: scroll;
-	}
+  @include small-desktop {
+    overflow-y: scroll;
+  }
 }
 h1,
 h2,
@@ -28,20 +28,34 @@ a,
 li,
 label,
 input,
-span {
-	font-family: 'Montserrat', sans-serif;
-	line-height: 1.5em;
+span,
+br {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5em;
+
+  &::selection {
+    background: none;
+    color: $dark-blue;
+  }
 }
 p,
 a,
 li,
 label,
 input {
-	font-size: 16px;
-	letter-spacing: 0.03em;
-	line-height: 24px;
-	color: black;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 24px;
+  color: black;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
+}
+
+.app-leave {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.app-leave.app-leave-active {
+  opacity: 0;
 }

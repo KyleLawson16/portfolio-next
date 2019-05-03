@@ -1,19 +1,25 @@
 {
-    "name": "portfolio",
-    "version": 2,
-    "alias": "www.kylelawson.io",
+  "name": "portfolio",
+  "version": 2,
+  "alias": "www.kylelawson.io",
+  "env": {
+    "CTF_SPACE_ID": "@ctf-space-id-portfolio",
+    "CTF_CDA_TOKEN": "@ctf-cda-token-portfolio",
+    "CTF_CPA_TOKEN": "@ctf-cpa-token-portfolio"
+  },
+  "build": {
     "env": {
       "CTF_SPACE_ID": "@ctf-space-id-portfolio",
       "CTF_CDA_TOKEN": "@ctf-cda-token-portfolio",
       "CTF_CPA_TOKEN": "@ctf-cpa-token-portfolio"
+    }
+  },
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
     },
-    "builds": [
-      {
-        "src": "next.config.js",
-        "use": "@now/next"
-      },
-      { "src": "static/**", "use": "@now/static" }
-    ],
-    "routes": [{ "src": "static/(.*)", "dest": "/static/$1" }]
-  }
-  
+    { "src": "static/**", "use": "@now/static" }
+  ],
+  "routes": [{ "src": "static/(.*)", "dest": "/static/$1" }]
+}
