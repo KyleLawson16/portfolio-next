@@ -17,9 +17,10 @@
   }
 
   &__content {
-    width: 100vh;
-    height: 80vh;
-    margin: 10vh;
+    width: 112vh;
+    max-width: 65vw;
+    height: 90vh;
+    margin: 5vh;
     position: relative;
     background-color: #fff;
     overflow: hidden;
@@ -31,6 +32,7 @@
     }
 
     @include small-desktop {
+      max-width: none;
       margin: 0 0 80px;
       width: calc(100vw - 40px);
       height: 80vw;
@@ -50,9 +52,9 @@
   &__launch-btn {
     position: absolute;
     right: 0;
-    bottom: 10vh;
-    width: 10vh;
-    height: 10vh;
+    bottom: 5vh;
+    width: 5vh;
+    height: 5vh;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -60,6 +62,10 @@
 
     a {
       height: 28px;
+    }
+
+    svg {
+      width: 18px;
     }
 
     @include small-desktop {
@@ -95,8 +101,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 420px;
-    height: 10vh;
+    width: 350px;
+    height: 5vh;
     background-color: $dark-blue;
     display: flex;
     flex-direction: row;
@@ -167,8 +173,8 @@
     }
 
     &--arrow svg {
-      width: 22px;
-      margin: 0 5px;
+      width: 18px;
+      margin: 4px 5px 0;
 
       @include mobile {
         margin: 0;
