@@ -3,6 +3,7 @@ import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 // Components
 import { CarouselItem } from "../../components/items";
+import { HyphenSVG } from "../../components/icons";
 
 // Styles
 import "./styles/LandingCarousel.scss";
@@ -93,6 +94,14 @@ class LandingCarousel extends Component {
                 />
               </ReactCSSTransitionGroup>
             ))}
+            <div className={`landing-carousel__slide--content`}>
+              <h3>
+                <HyphenSVG color="#ffffff" marginBottom={6} />{" "}
+                {data[activeSlide].fields.category}
+              </h3>
+              <h1>{data[activeSlide].fields.name}</h1>
+              <h3>{data[activeSlide].fields.shortDesc}</h3>
+            </div>
           </div>
         </div>
         <div className="landing-carousel__launch-btn">

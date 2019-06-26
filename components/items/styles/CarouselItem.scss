@@ -1,102 +1,90 @@
-@import 'vars';
+@import "vars";
 
 .landing-carousel {
-	&__slide {
-		position: absolute;
-		top: 0;
-		z-index: -1000;
-		width: 100%;
-		height: 100%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		transition-duration: $hover-transition;
-		transition-timing-function: ease-out;
+  &__slide {
+    position: absolute;
+    top: 0;
+    z-index: -1000;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition-duration: $hover-transition;
+    transition-timing-function: ease-out;
 
-		&--content {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 35%;
-			background-color: rgba(0, 0, 0, 0.7);
-			color: #fff;
-			padding: 20px;
-			font-family: 'Montserrat', sans-serif;
-			transition-duration: $hover-transition;
-			transition-timing-function: ease-out;
+    &--content {
+      position: absolute;
+      bottom: 0;
+      width: 35%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 20px 25px;
+      font-family: "Montserrat", sans-serif;
 
-			@include mobile {
-				width: 210px;
-			}
+      @include mobile {
+        width: 210px;
+      }
 
-			h3 {
-				font-size: 20px;
-				font-weight: 300;
-				margin: 0;
+      h3 {
+        font-size: 20px;
+        font-weight: 300;
+        margin: 0;
 
-				@include mobile {
-					font-size: 16px;
-				}
-			}
+        @include mobile {
+          font-size: 16px;
+        }
+      }
 
-			h1 {
-				font-size: 26px;
-				font-weight: 600;
-				margin: 0;
+      h1 {
+        font-size: 26px;
+        font-weight: 600;
+        margin: 0;
 
-				@include mobile {
-					font-size: 22px;
-				}
-			}
-		}
+        @include mobile {
+          font-size: 22px;
+        }
+      }
+    }
 
-		&:hover {
-			transform: scale(1.2);
-			transition-duration: $hover-transition;
-			transition-timing-function: ease-out;
+    &:hover {
+      transform: scale(1.2);
+      transition-duration: $hover-transition;
+      transition-timing-function: ease-out;
 
-			@include small-desktop {
-				transform: none;
-			}
-
-			.landing-carousel__slide--content {
-				padding: 20px 20px 70px 85px;
-				transition-duration: $hover-transition;
-				transition-timing-function: ease-out;
-				@include small-desktop {
-					padding: 20px;
-				}
-			}
-		}
-	}
+      @include small-desktop {
+        transform: none;
+      }
+    }
+  }
 }
 
 .anim__carousel__slide-enter.next {
-	transform: translate(100%);
+  transform: translate(100%);
 }
 .anim__carousel__slide-enter.anim__carousel__slide-enter-active.next {
-	transform: translate(0%);
-	transition: transform $carousel-transition-timing ease-in-out;
+  transform: translate(0%);
+  transition: transform $carousel-transition-timing ease-in-out;
 }
 .anim__carousel__slide-leave.next {
-	transform: translate(0%);
+  transform: translate(0%);
 }
 .anim__carousel__slide-leave.anim__carousel__slide-leave-active.next {
-	transform: translate(-100%);
-	transition: transform $carousel-transition-timing ease-in-out;
+  transform: translate(-100%);
+  transition: transform $carousel-transition-timing ease-in-out;
 }
 
 .anim__carousel__slide-enter.prev {
-	transform: translate(-100%);
+  transform: translate(-100%);
 }
 .anim__carousel__slide-enter.anim__carousel__slide-enter-active.prev {
-	transform: translate(0%);
-	transition: transform $carousel-transition-timing ease-in-out;
+  transform: translate(0%);
+  transition: transform $carousel-transition-timing ease-in-out;
 }
 .anim__carousel__slide-leave.prev {
-	transform: translate(0%);
+  transform: translate(0%);
 }
 .anim__carousel__slide-leave.anim__carousel__slide-leave-active.prev {
-	transform: translate(100%);
-	transition: transform $carousel-transition-timing ease-in-out;
+  transform: translate(100%);
+  transition: transform $carousel-transition-timing ease-in-out;
 }
